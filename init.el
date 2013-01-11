@@ -1,28 +1,10 @@
-(setq mbv-emacs-init-file load-file-name)
+;; Directories and file names
+(setq mbv-emacs-init-file (or load-file-name buffer-file-name))
 (setq mbv-emacs-config-dir
       (file-name-directory mbv-emacs-init-file))
-
 (setq user-emacs-directory mbv-emacs-config-dir)
-
-(setq backup-directory-alist
-      (list (cons "." (expand-file-name "backup" user-emacs-directory))))
-
-;; Set up 'custom' system
-(setq custom-file (expand-file-name "emacs-customizations.el" mbv-emacs-config-dir))
-(load custom-file)
-
-;; Ensure loaded packages
-(setq package-archives
-      '(("gnu" . "http://elpa.gnu.org/packages/")
-	("marmalade" . "http://marmalade-repo.org/packages/")
-	("Tromey" . "http://tromey.com/elpa/")))
-(package-initialize)
-(setq mbv-required-packages
-      (list 'xml-rpc 'magit 'gh))
-(dolist (package mbv-required-packages)
-  (when (not (package-installed-p package))
-    (package-refresh-contents)
-    (package-install package)))
+(setq mbv-init-dir 
+      (expand-file-name "init.d" mbv-emacs-config-dir))
 
 ;; Add custom elisp dir to loadpath
 (setq mbv-elisp-dir
@@ -30,18 +12,12 @@
 (setq mbv-elisp-external-dir
       (expand-file-name "external" mbv-elisp-dir))
 
-(dolist (project (directory-files mbv-elisp-external-dir t "\\w+"))
-  (when (file-directory-p project)
-    (add-to-list 'load-path project)))
+;; Load all elisp files in ./init.d
+(if (file-exists-p mbv-init-dir)
+    (dolist (file (directory-files mbv-init-dir t "\.el$"))
+      (load file)))
 
-;; Load lorem-ipsum
-(add-to-list 'load-path mbv-elisp-dir)
-(autoload 'Lorem-ipsum-insert-paragraphs "lorem-ipsum" "" t)
-(autoload 'Lorem-ipsum-insert-sentences "lorem-ipsum" "" t)
-(autoload 'Lorem-ipsum-insert-list "lorem-ipsum" "" t)
+;; Set up 'custom' system
+(setq custom-file (expand-file-name "emacs-customizations.el" mbv-emacs-config-dir))
+(load custom-file)
 
-;; Line numbers hook
-(add-hook 'mbv-code-modes-hook
-	  (lambda () (linum-mode 1)))
-(add-hook 'ruby-mode-hook
-	  (lambda () (run-hooks 'mbv-code-modes-hook)))
