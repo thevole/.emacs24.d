@@ -10,3 +10,19 @@
 ;; Set up 'custom' system
 (setq custom-file (expand-file-name "emacs-customizations.el" mbv-emacs-config-dir))
 (load custom-file)
+
+;; Add custom elisp dir to loadpath
+(setq mbv-elisp-dir
+      (expand-file-name "elisp" user-emacs-directory))
+(setq mbv-elisp-external-dir
+      (expand-file-name "external" mbv-elisp-dir))
+
+(dolist (project (directory-files mbv-elisp-external-dir t "\\w+"))
+  (when (file-directory-p project)
+    (add-to-list 'load-path project)))
+
+;; Load lorem-ipsum
+(add-to-list 'load-path mbv-elisp-dir)
+(autoload 'Lorem-ipsum-insert-paragraphs "lorem-ipsum" "" t)
+(autoload 'Lorem-ipsum-insert-sentences "lorem-ipsum" "" t)
+(autoload 'Lorem-ipsum-insert-list "lorem-ipsum" "" t)
