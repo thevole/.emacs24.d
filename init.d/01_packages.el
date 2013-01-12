@@ -9,7 +9,9 @@
 (package-initialize)
 
 (setq mbv-packages 
-      (list 'xml-rpc 'magit 'gh 'inf-ruby))
+      (list 'xml-rpc 'magit 'gh 'inf-ruby
+            'textmate 'ruby-compilation 'jump
+            'yaml-mode 'rhtml))
 ;; (dolist (package mbv-required-packages)
 ;;   (when (not (package-installed-p package))
 ;;     (package-refresh-contents)
@@ -37,6 +39,13 @@
         (:name jump :type elpa)
         ;; (:name magit-gh-pulls :type elpa) 
         (:name eieio :type elpa)
-        (:name gist :type elpa)))
+        (:name gist :type elpa)
+        (:name ruby-mode :type elpa :load "ruby-mode.el")
+        (:name inf-ruby :type elpa)
+        (:name ruby-compilation :type elpa)
+        (:name textmate :type git :url "https://github.com/defunkt/textmate.el" :load "textmate.el")
+        (:name rhtml :type git :url "https://github.com/eschulte/rhtml.git" :features rhtml-mode)
+        (:name yaml-mode :type git :url "https://github.com/yoshiki/yaml-mode.git" :features yaml-mode)
+))
 
 (el-get 'sync (mapcar 'prin1-to-string mbv-packages))
