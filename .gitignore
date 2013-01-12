@@ -1,3 +1,5 @@
 elpa/
 backup/
 eshell/
+el-get/*
+el-get/.*

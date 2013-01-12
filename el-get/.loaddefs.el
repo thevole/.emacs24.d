@@ -3,8 +3,57 @@
 ;;; Code:
 
 
+;;;### (autoloads (el-get-checksum el-get-make-recipes el-get-cd
+;;;;;;  el-get-self-update el-get-update-all el-get-version) "el-get/el-get"
+;;;;;;  "el-get/el-get.el" (20721 37079))
+;;; Generated autoloads from el-get/el-get.el
+
+(autoload 'el-get-version "el-get/el-get" "\
+Message the current el-get version
+
+\(fn)" t nil)
+
+(autoload 'el-get-update-all "el-get/el-get" "\
+Performs update of all installed packages.
+
+\(fn &optional NO-PROMPT)" t nil)
+
+(autoload 'el-get-self-update "el-get/el-get" "\
+Update el-get itself.  The standard recipe takes care of reloading the code.
+
+\(fn)" t nil)
+
+(autoload 'el-get-cd "el-get/el-get" "\
+Open dired in the package directory.
+
+\(fn PACKAGE)" t nil)
+
+(autoload 'el-get-make-recipes "el-get/el-get" "\
+Loop over `el-get-sources' and write a recipe file for each
+entry which is not a symbol and is not already a known recipe.
+
+\(fn &optional DIR)" t nil)
+
+(autoload 'el-get-checksum "el-get/el-get" "\
+Compute the checksum of the given package, and put it in the kill-ring
+
+\(fn PACKAGE &optional PACKAGE-STATUS-ALIST)" t nil)
+
+;;;***
+
+;;;### (autoloads (el-get-list-packages) "el-get/el-get-list-packages"
+;;;;;;  "el-get/el-get-list-packages.el" (20721 37079))
+;;; Generated autoloads from el-get/el-get-list-packages.el
+
+(autoload 'el-get-list-packages "el-get/el-get-list-packages" "\
+Display a list of packages.
+
+\(fn)" t nil)
+
+;;;***
+
 ;;;### (autoloads (gh-api-v3 gh-api) "gh/gh-api" "gh/gh-api.el" (20721
-;;;;;;  36941))
+;;;;;;  37138))
 ;;; Generated autoloads from gh/gh-api.el
 
 (require 'eieio)
@@ -16,7 +65,7 @@
 ;;;***
 
 ;;;### (autoloads (gh-oauth-authenticator gh-password-authenticator
-;;;;;;  gh-authenticator) "gh/gh-auth" "gh/gh-auth.el" (20721 36941))
+;;;;;;  gh-authenticator) "gh/gh-auth" "gh/gh-auth.el" (20721 37138))
 ;;; Generated autoloads from gh/gh-auth.el
 
 (require 'eieio)
@@ -29,14 +78,14 @@
 
 ;;;***
 
-;;;### (autoloads nil "gh/gh-cache" "gh/gh-cache.el" (20721 36941))
+;;;### (autoloads nil "gh/gh-cache" "gh/gh-cache.el" (20721 37138))
 ;;; Generated autoloads from gh/gh-cache.el
 
 (require 'eieio)
 
 ;;;***
 
-;;;### (autoloads nil "gh/gh-common" "gh/gh-common.el" (20721 36941))
+;;;### (autoloads nil "gh/gh-common" "gh/gh-common.el" (20721 37138))
 ;;; Generated autoloads from gh/gh-common.el
 
 (require 'eieio)
@@ -44,7 +93,7 @@
 ;;;***
 
 ;;;### (autoloads (gh-gist-gist gh-gist-gist-stub gh-gist-api) "gh/gh-gist"
-;;;;;;  "gh/gh-gist.el" (20721 36941))
+;;;;;;  "gh/gh-gist.el" (20721 37138))
 ;;; Generated autoloads from gh/gh-gist.el
 
 (require 'eieio)
@@ -57,7 +106,7 @@
 
 ;;;***
 
-;;;### (autoloads nil "gh/gh-issues" "gh/gh-issues.el" (20721 36941))
+;;;### (autoloads nil "gh/gh-issues" "gh/gh-issues.el" (20721 37138))
 ;;; Generated autoloads from gh/gh-issues.el
 
 (require 'eieio)
@@ -65,7 +114,7 @@
 ;;;***
 
 ;;;### (autoloads (gh-oauth-api) "gh/gh-oauth" "gh/gh-oauth.el" (20721
-;;;;;;  36941))
+;;;;;;  37138))
 ;;; Generated autoloads from gh/gh-oauth.el
 
 (require 'eieio)
@@ -75,7 +124,7 @@
 ;;;***
 
 ;;;### (autoloads (gh-orgs-org-stub gh-orgs-api) "gh/gh-orgs" "gh/gh-orgs.el"
-;;;;;;  (20721 36941))
+;;;;;;  (20721 37138))
 ;;; Generated autoloads from gh/gh-orgs.el
 
 (require 'eieio)
@@ -87,7 +136,7 @@
 ;;;***
 
 ;;;### (autoloads (gh-pulls-request gh-pulls-api) "gh/gh-pulls" "gh/gh-pulls.el"
-;;;;;;  (20721 36941))
+;;;;;;  (20721 37138))
 ;;; Generated autoloads from gh/gh-pulls.el
 
 (require 'eieio)
@@ -99,7 +148,7 @@
 ;;;***
 
 ;;;### (autoloads (gh-repos-repo gh-repos-repo-stub gh-repos-api)
-;;;;;;  "gh/gh-repos" "gh/gh-repos.el" (20721 36941))
+;;;;;;  "gh/gh-repos" "gh/gh-repos.el" (20721 37138))
 ;;; Generated autoloads from gh/gh-repos.el
 
 (require 'eieio)
@@ -112,15 +161,47 @@
 
 ;;;***
 
-;;;### (autoloads nil "gh/gh-url" "gh/gh-url.el" (20721 36941))
+;;;### (autoloads nil "gh/gh-url" "gh/gh-url.el" (20721 37138))
 ;;; Generated autoloads from gh/gh-url.el
 
 (require 'eieio)
 
 ;;;***
 
+;;;### (autoloads (run-ruby inf-ruby inf-ruby-setup-keybindings)
+;;;;;;  "inf-ruby/inf-ruby" "inf-ruby/inf-ruby.el" (20721 37141))
+;;; Generated autoloads from inf-ruby/inf-ruby.el
+
+(autoload 'inf-ruby-setup-keybindings "inf-ruby/inf-ruby" "\
+Set local key defs to invoke inf-ruby from ruby-mode.
+
+\(fn)" nil nil)
+
+(autoload 'inf-ruby "inf-ruby/inf-ruby" "\
+Run an inferior Ruby process in a buffer.
+With prefix argument, prompts for which Ruby implementation
+\(from the list `inf-ruby-implementations') to use. Runs the
+hooks `inf-ruby-mode-hook' (after the `comint-mode-hook' is
+run).
+
+\(fn &optional IMPL)" t nil)
+
+(autoload 'run-ruby "inf-ruby/inf-ruby" "\
+Run an inferior Ruby process, input and output via buffer *ruby*.
+If there is a process already running in `*ruby*', switch to that buffer.
+With argument, allows you to edit the command line (default is value
+of `ruby-program-name').  Runs the hooks `inferior-ruby-mode-hook'
+\(after the `comint-mode-hook' is run).
+\(Type \\[describe-mode] in the process buffer for a list of commands.)
+
+\(fn &optional COMMAND NAME)" t nil)
+
+(eval-after-load 'ruby-mode '(inf-ruby-setup-keybindings))
+
+;;;***
+
 ;;;### (autoloads (magit-status) "magit/magit" "magit/magit.el" (20721
-;;;;;;  36948))
+;;;;;;  37145))
 ;;; Generated autoloads from magit/magit.el
 
 (autoload 'magit-status "magit/magit" "\
@@ -138,7 +219,7 @@ when asking for user input.
 ;;;***
 
 ;;;### (autoloads (magit-blame-mode) "magit/magit-blame" "magit/magit-blame.el"
-;;;;;;  (20721 36948))
+;;;;;;  (20721 37145))
 ;;; Generated autoloads from magit/magit-blame.el
 
 (autoload 'magit-blame-mode "magit/magit-blame" "\
@@ -149,7 +230,7 @@ Display blame information inline.
 ;;;***
 
 ;;;### (autoloads (turn-on-magit-stgit magit-stgit-mode) "magit/magit-stgit"
-;;;;;;  "magit/magit-stgit.el" (20721 36948))
+;;;;;;  "magit/magit-stgit.el" (20721 37145))
 ;;; Generated autoloads from magit/magit-stgit.el
 
 (autoload 'magit-stgit-mode "magit/magit-stgit" "\
@@ -165,7 +246,7 @@ Unconditionally turn on `magit-stgit-mode'.
 ;;;***
 
 ;;;### (autoloads (turn-on-magit-svn magit-svn-mode) "magit/magit-svn"
-;;;;;;  "magit/magit-svn.el" (20721 36948))
+;;;;;;  "magit/magit-svn.el" (20721 37145))
 ;;; Generated autoloads from magit/magit-svn.el
 
 (autoload 'magit-svn-mode "magit/magit-svn" "\
@@ -181,7 +262,7 @@ Unconditionally turn on `magit-svn-mode'.
 ;;;***
 
 ;;;### (autoloads (turn-on-magit-topgit magit-topgit-mode) "magit/magit-topgit"
-;;;;;;  "magit/magit-topgit.el" (20721 36948))
+;;;;;;  "magit/magit-topgit.el" (20721 37145))
 ;;; Generated autoloads from magit/magit-topgit.el
 
 (autoload 'magit-topgit-mode "magit/magit-topgit" "\
@@ -198,7 +279,7 @@ Unconditionally turn on `magit-topgit-mode'.
 
 ;;;### (autoloads (global-magit-wip-save-mode magit-wip-save-mode
 ;;;;;;  magit-wip-mode) "magit/magit-wip" "magit/magit-wip.el" (20721
-;;;;;;  36948))
+;;;;;;  37145))
 ;;; Generated autoloads from magit/magit-wip.el
 
 (defvar magit-wip-mode nil "\
@@ -248,7 +329,7 @@ See `magit-wip-save-mode' for more information on Magit-Wip-Save mode.
 ;;;***
 
 ;;;### (autoloads (rebase-mode) "magit/rebase-mode" "magit/rebase-mode.el"
-;;;;;;  (20721 36948))
+;;;;;;  (20721 37145))
 ;;; Generated autoloads from magit/rebase-mode.el
 
 (autoload 'rebase-mode "magit/rebase-mode" "\
@@ -265,11 +346,15 @@ running 'man git-rebase' at the command line) for details.
 
 ;;;***
 
-;;;### (autoloads nil nil ("gh/gh-autoloads.el" "gh/gh-pkg.el" "gh/gh.el"
-;;;;;;  "inf-ruby/inf-ruby.el" "magit/50magit.el" "magit/magit-bisect.el"
-;;;;;;  "magit/magit-key-mode.el" "magit/magit-pkg.el" "xml-rpc/xml-rpc-autoloads.el"
-;;;;;;  "xml-rpc/xml-rpc-pkg.el" "xml-rpc/xml-rpc.el") (20721 36953
-;;;;;;  411872))
+;;;### (autoloads nil nil ("el-get/el-get-autoloads.el" "el-get/el-get-build.el"
+;;;;;;  "el-get/el-get-byte-compile.el" "el-get/el-get-core.el" "el-get/el-get-custom.el"
+;;;;;;  "el-get/el-get-dependencies.el" "el-get/el-get-install.el"
+;;;;;;  "el-get/el-get-methods.el" "el-get/el-get-notify.el" "el-get/el-get-recipes.el"
+;;;;;;  "el-get/el-get-status.el" "gh/gh-autoloads.el" "gh/gh-pkg.el"
+;;;;;;  "gh/gh.el" "inf-ruby/inf-ruby-autoloads.el" "inf-ruby/inf-ruby-pkg.el"
+;;;;;;  "magit/50magit.el" "magit/magit-bisect.el" "magit/magit-key-mode.el"
+;;;;;;  "magit/magit-pkg.el" "xml-rpc/xml-rpc-autoloads.el" "xml-rpc/xml-rpc-pkg.el"
+;;;;;;  "xml-rpc/xml-rpc.el") (20721 37149 219335))
 
 ;;;***
 
