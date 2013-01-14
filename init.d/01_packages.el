@@ -11,7 +11,10 @@
 (setq mbv-packages 
       (list 'xml-rpc 'magit 'gh 'inf-ruby
             'textmate 'ruby-compilation 'jump
-            'yaml-mode 'rhtml 'css-mode))
+            'inflections 'coffee-mode
+            'haml-mode 'feature-mode
+            'rhtml-mode
+            'yaml-mode 'rhtml 'scss-mode))
 
 ;; el-get - see https://github.com/dimitri/el-get
 (setq el-get-dir (expand-file-name "el-get" user-emacs-directory))
