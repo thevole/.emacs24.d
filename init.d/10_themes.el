@@ -1,2 +1,2 @@
-(set-frame-font "Menlo-16")
+(set-frame-font "Monaco-16")
 (load-theme 'wombat t)
