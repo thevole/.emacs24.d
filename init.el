@@ -20,4 +20,3 @@
 ;; Set up 'custom' system
 (setq custom-file (expand-file-name "emacs-customizations.el" mbv-emacs-config-dir))
 (load custom-file)
-
