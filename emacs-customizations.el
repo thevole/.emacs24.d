@@ -8,6 +8,7 @@
  '(delete-selection-mode t)
  '(electric-indent-mode t)
  '(ido-enable-flex-matching t)
+ '(ido-everywhere t)
  '(ido-mode (quote both) nil (ido))
  '(inhibit-startup-screen t)
  '(make-backup-files nil)

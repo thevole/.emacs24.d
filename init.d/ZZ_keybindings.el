@@ -6,8 +6,8 @@
 ;; (global-unset-key (kbd "C-x C-z"))
 
 
-(global-set-key (kbd "<f1>") 'multi-term-dedicated-toggle) ; open/close "main" terminal
-(global-set-key (kbd "M-<f1>") 'multi-term) ; new terminal
+;; (global-set-key (kbd "<f1>") 'multi-term-dedicated-toggle) ; open/close "main" terminal
+;; (global-set-key (kbd "M-<f1>") 'multi-term) ; new terminal
 (defun mbv-revert-buffer-no-confirm () 
   "Revert buffer with no confirmation"
   (interactive)
