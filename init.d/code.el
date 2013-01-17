@@ -8,7 +8,7 @@
 
 ;; Show whitespace
 (add-hook 'mbv-code-modes-hook
-	  (lambda () (whitespace-mode 1)))
+	  (lambda () (whitespace-mode 0)))
 
 ;; Truncate lines
 (add-hook 'mbv-code-modes-hook
