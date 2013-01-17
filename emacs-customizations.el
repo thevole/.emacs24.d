@@ -5,6 +5,7 @@
  ;; If there is more than one, they won't work right.
  '(column-number-mode t)
  '(custom-safe-themes (quote ("71b172ea4aad108801421cc5251edb6c792f3adbaecfa1c52e94e3d99634dee7" default)))
+ '(delete-by-moving-to-trash t)
  '(delete-selection-mode t)
  '(electric-indent-mode t)
  '(ido-enable-flex-matching t)
