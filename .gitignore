@@ -5,3 +5,4 @@ el-get/*
 el-get/.*
 bookmarks
 .smex-items
+/tramp

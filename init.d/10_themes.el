@@ -1,4 +1,3 @@
-(set-frame-font "Monaco-15")
 (load-theme 'wheatgrass t)
 
 ;; Zenburn is a low-contrast theme, good for long stretches of
