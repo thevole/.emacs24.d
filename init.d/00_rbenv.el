@@ -4,3 +4,4 @@
       (cons (concat (getenv "HOME") "/.rbenv/shims") 
 	    (cons (concat (getenv "HOME") "/.rbenv/bin") 
 		  exec-path)))
+(setq exec-path (append exec-path '("/usr/local/bin")))
