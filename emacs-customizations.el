@@ -14,6 +14,7 @@
  '(inhibit-startup-screen t)
  '(ispell-program-name "/usr/local/bin/ispell")
  '(make-backup-files nil)
+ '(sentence-end-double-space nil)
  '(show-paren-mode t)
  '(tool-bar-mode nil)
  '(tooltip-mode nil))
