@@ -23,13 +23,7 @@
 (add-hook 'mbv-code-modes-hook
           (lambda () (fci-mode 1)))           
 
-(defun mbv-add-rubyxmp ()
-  (require 'rcodetools)
-  (local-set-key (kbd "C-c C-c") 'xmp))
-
-(add-hook 'mbv-code-modes-hook 'mbv-add-rubyxmp)
-
-(add-hook 'ruby-mode-hook
+(add-hook 'prog-mode-hook
 	  (lambda () (run-hooks 'mbv-code-modes-hook)))
 
 
