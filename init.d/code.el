@@ -4,15 +4,19 @@
 
 ;; Line numbers
 (add-hook 'mbv-code-modes-hook
-	  (lambda () (linum-mode 1)))
+          (lambda () (linum-mode 1)))
 
 ;; Show whitespace
 (add-hook 'mbv-code-modes-hook
-	  (lambda () (whitespace-mode 0)))
+          (lambda () (whitespace-mode 0)))
+
+;; Textmate mode
+(add-hook 'mbv-code-modes-hook
+          (lambda () (textmate-mode 1)))
 
 ;; Truncate lines
 (add-hook 'mbv-code-modes-hook
-	  (lambda () (setq truncate-lines t)))
+    (lambda () (setq truncate-lines t)))
 
 ;; Clean up whitespace on save
 (add-hook 'mbv-code-modes-hook
@@ -21,9 +25,7 @@
 
 ;; Show an indicator of the fill column
 (add-hook 'mbv-code-modes-hook
-          (lambda () (fci-mode 1)))           
+          (lambda () (fci-mode 1)))
 
 (add-hook 'prog-mode-hook
-	  (lambda () (run-hooks 'mbv-code-modes-hook)))
-
-
+          (lambda () (run-hooks 'mbv-code-modes-hook)))
