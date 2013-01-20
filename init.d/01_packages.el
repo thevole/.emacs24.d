@@ -1,5 +1,5 @@
 (setq el-get-dir (expand-file-name "el-get" user-emacs-directory))
-(add-to-list 'load-path 
+(add-to-list 'load-path
              (expand-file-name "el-get/el-get" user-emacs-directory))
 
 (setq el-get-user-package-directory
@@ -47,12 +47,12 @@
                :features ruby-mode
                :after (progn (ruby-mode-hook)))
         (:name ruby-compilation :type elpa)
-        (:name yaml-mode 
+        (:name yaml-mode
                :type git
                :url "http://github.com/yoshiki/yaml-mode.git"
                :features yaml-mode)
-        (:name css-mode 
-               :type elpa 
+        (:name css-mode
+               :type elpa
                :after (progn (css-mode-hook)))
         (:name textmate
                :type git
@@ -74,6 +74,10 @@
                :type git
                :url "https://github.com/magit/magit.git"
                :features magit)
+        (:name yari
+               :type git
+               :url "https://github.com/hron/yari.el.git"
+               :load "yari.el")
 ))
 
      (setq mbv-packages
