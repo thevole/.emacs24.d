@@ -7,6 +7,7 @@
  '(default-frame-alist (quote ((width . 120) (height . 45) (menu-bar-lines . 1) (font . "Monaco-15"))))
  '(delete-by-moving-to-trash t)
  '(delete-selection-mode t)
+ '(dired-use-ls-dired nil)
  '(electric-indent-mode t)
  '(ido-enable-flex-matching t)
  '(ido-everywhere t)
