@@ -78,6 +78,10 @@
                :type git
                :url "https://github.com/hron/yari.el.git"
                :load "yari.el")
+        (:name rinari
+               :type git
+               :url "https://github.com/eschulte/rinari.git"
+               :local "rinari.el")
 ))
 
      (setq mbv-packages
