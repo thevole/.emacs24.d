@@ -10,10 +10,6 @@
 (add-hook 'mbv-code-modes-hook
           (lambda () (whitespace-mode 0)))
 
-;; Textmate mode
-(add-hook 'mbv-code-modes-hook
-          (lambda () (textmate-mode 1)))
-
 ;; Truncate lines
 (add-hook 'mbv-code-modes-hook
     (lambda () (setq truncate-lines t)))

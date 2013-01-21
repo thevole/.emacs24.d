@@ -54,10 +54,6 @@
         (:name css-mode
                :type elpa
                :after (progn (css-mode-hook)))
-        (:name textmate
-               :type git
-               :url "git://github.com/defunkt/textmate.el"
-               :load "textmate.el")
         (:name rspec-mode
                :type git
                :url "https://github.com/pezra/rspec-mode.git"
