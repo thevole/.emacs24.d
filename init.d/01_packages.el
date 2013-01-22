@@ -78,6 +78,10 @@
                :type git
                :url "https://github.com/eschulte/rinari.git"
                :local "rinari.el")
+        (:name wrap-region
+               :type git
+               :url "https://github.com/rejeep/wrap-region.git"
+               :features wrap-region)
 ))
 
      (setq mbv-packages

@@ -2,6 +2,10 @@
   "Toggle fill column indicator"
   t)
 
+;; Wrap region
+(add-hook 'mbv-code-modes-hook
+          (lambda () (wrap-region-mode 1)))
+
 ;; Line numbers
 (add-hook 'mbv-code-modes-hook
           (lambda () (linum-mode 1)))
