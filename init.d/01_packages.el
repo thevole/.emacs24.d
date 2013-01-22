@@ -82,6 +82,10 @@
                :type git
                :url "https://github.com/rejeep/wrap-region.git"
                :features wrap-region)
+        (:name expand-region
+               :type git
+               :url "https://github.com/magnars/expand-region.el.git"
+               :features expand-region)
 ))
 
      (setq mbv-packages
