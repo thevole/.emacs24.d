@@ -4,7 +4,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(column-number-mode t)
- '(default-frame-alist (quote ((width . 120) (height . 45) (menu-bar-lines . 1) (font . "Monaco-15"))))
+ '(default-frame-alist (quote ((width . 120) (height . 45) (menu-bar-lines . 1) (font . "Source Code Pro Light-16"))))
  '(delete-by-moving-to-trash t)
  '(delete-selection-mode t)
  '(dired-use-ls-dired nil)
