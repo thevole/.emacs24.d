@@ -1,5 +1,7 @@
 ; Keyboard Bindings
 
+(global-set-key (kbd "C-M-i") 'back-to-indentation)
+
 ;; I accidentally hit the following keys WAY too often.
 ;; (global-unset-key (kbd "C-x C-c"))
 ;; (global-unset-key (kbd "C-z"))
@@ -8,7 +10,7 @@
 
 ;; (global-set-key (kbd "<f1>") 'multi-term-dedicated-toggle) ; open/close "main" terminal
 ;; (global-set-key (kbd "M-<f1>") 'multi-term) ; new terminal
-(defun mbv-revert-buffer-no-confirm () 
+(defun mbv-revert-buffer-no-confirm ()
   "Revert buffer with no confirmation"
   (interactive)
   (revert-buffer nil t))
@@ -23,4 +25,3 @@
 
 ;; Expansion
 (global-set-key (kbd "M-/") 'hippie-expand)
-

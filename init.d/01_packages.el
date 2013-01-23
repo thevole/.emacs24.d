@@ -86,14 +86,11 @@
                :type git
                :url "https://github.com/magnars/expand-region.el.git"
                :features expand-region)
-        (:name yasnippet
-              :website "https://github.com/capitaomorte/yasnippet.git"
-              :description "YASnippet is a template system for Emacs."
-              :type github
-              :pkgname "capitaomorte/yasnippet"
-              :features "yasnippet"
-              :compile "yasnippet.el")
-        ))
+        (:name jump-char
+               :type git
+               :url "https://github.com/lewang/jump-char.git"
+               :features jump-char)
+))
 
      (setq mbv-packages
            (append
