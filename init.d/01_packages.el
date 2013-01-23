@@ -90,6 +90,10 @@
                :type git
                :url "https://github.com/lewang/jump-char.git"
                :features jump-char)
+        (:name ace-jump
+               :type git
+               :url "https://github.com/winterTTr/ace-jump-mode.git"
+	       :load "ace-jump-mode.el")
 ))
 
      (setq mbv-packages
