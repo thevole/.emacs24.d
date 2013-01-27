@@ -1,3 +1,4 @@
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -9,6 +10,8 @@
  '(delete-selection-mode t)
  '(dired-use-ls-dired nil)
  '(electric-indent-mode t)
+ '(eshell-cmpl-ignore-case t)
+ '(eshell-glob-case-insensitive t)
  '(ido-enable-flex-matching t)
  '(ido-everywhere t)
  '(ido-mode (quote both) nil (ido))
