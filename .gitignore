@@ -6,3 +6,4 @@ el-get/.*
 bookmarks
 .smex-items
 /tramp
+tetris-*
