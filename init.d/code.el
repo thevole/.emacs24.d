@@ -6,6 +6,9 @@
 (add-hook 'mbv-code-modes-hook
           (lambda () (wrap-region-mode 1)))
 
+(add-hook 'html-mode-hook
+          (lambda () (wrap-region-mode 1)))
+
 ;; Line numbers
 (add-hook 'mbv-code-modes-hook
           (lambda () (linum-mode 1)))
